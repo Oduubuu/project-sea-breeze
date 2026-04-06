@@ -1,11 +1,26 @@
+// 1. 초기화
 @import "../reset.css";
 
+// 2. 도구함 가져오기
+@import "variable";
+@import "mixin";
+
 .header-util {
+
     // 1. 기본값 (모바일 우선)
     .m-only {
         display: block;
+
+        @include desktop {
+            display: none;
+        }
     }
+
     .pc-only {
         display: none;
+
+        @include desktop {
+            display: flex;
+        }
     }
 }

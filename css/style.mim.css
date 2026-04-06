@@ -1,1 +1,1 @@
-@import"../reset.css";.header-util .m-only{display:block}.header-util .pc-only{display:none}/*# sourceMappingURL=style.mim.css.map */
+@import"../reset.css";.header-util .m-only{display:block}.header-util .pc-only{display:none}@media(min-width: 1024px){.header-util .m-only{display:none}.header-util .pc-only{display:flex}}/*# sourceMappingURL=style.mim.css.map */

@@ -4,4 +4,12 @@
 }
 .header-util .pc-only {
   display: none;
+}
+@media (min-width: 1024px) {
+  .header-util .m-only {
+    display: none;
+  }
+  .header-util .pc-only {
+    display: flex;
+  }
 }/*# sourceMappingURL=style.css.map */
