@@ -1,1 +1,11 @@
-@import "../reset.css"
+@import "../reset.css";
+
+.header-util {
+    // 1. 기본값 (모바일 우선)
+    .m-only {
+        display: block;
+    }
+    .pc-only {
+        display: none;
+    }
+}

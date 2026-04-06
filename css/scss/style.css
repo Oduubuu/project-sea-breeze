@@ -1,1 +1,7 @@
-@import "../reset.css";/*# sourceMappingURL=style.css.map */
+@import "../reset.css";
+.header-util .m-only {
+  display: block;
+}
+.header-util .pc-only {
+  display: none;
+}/*# sourceMappingURL=style.css.map */
