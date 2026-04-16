@@ -1,13 +1,14 @@
 /* Naming Convention: Kebab-case */
 
 // 1. 초기화
-@import "../reset.css";
+@import "reset";
 
 // 2. 도구함 가져오기
-@import "variable";
+// @import "variable";
 @import "mixin";
 
 .header-util {
+    display: none;
 
     // 1. 기본값 (모바일 우선)
     .m-only {
@@ -25,4 +26,14 @@
             display: flex;
         }
     }
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    background: url(../image/main_img/main_bg.png) 37%/cover no-repeat;
+}
+
+section {
+    display: none;
 }
