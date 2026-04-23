@@ -7,6 +7,46 @@
 // @import "variable";
 @import "mixin";
 
+
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.6rem;
+}
+
+
+
+section { // common style
+    .inner {
+        padding: 0 2rem;
+        
+    }
+    &#about {
+        .title {
+            font-size: 4rem;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .header-util {
     display: none;
 
@@ -29,11 +69,9 @@
 }
 
 main {
+    display: none;
     width: 100vw;
     height: 100vh;
     background: url(../image/main_img/main_bg.png) 37%/cover no-repeat;
 }
 
-section {
-    display: none;
-}
