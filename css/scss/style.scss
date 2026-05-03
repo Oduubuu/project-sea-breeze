@@ -7,32 +7,59 @@
 // @import "variable";
 @import "mixin";
 
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 html {
-    font-size: 62.5%;
+    font-size: 62.5%; //고정값
 }
+
 body {
     font-size: 1.6rem;
 }
 
 
-.header-util {
-    display: none;
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+    transform: translate3d(0, -100px, 0);
+    opacity: 0;
+    transition: all 0.5s;
 
-    // 1. 기본값 (모바일 우선)
-    .m-only {
-        display: block;
-
-        @include desktop {
-            display: none;
-        }
+    // 인트로후
+    &.on {
+        transform: none;
+        opacity: 1;
     }
 
-    .pc-only {
-        display: none;
+    &.scrolled {
+        background-color: #ffffff87;
+        height: 8rem;
+    }
 
-        @include desktop {
-            display: flex;
+    .inner {
+        .logo {
+            background: url(../image/main_img/logo_b.png) no-repeat center center / 100% auto;
+            width: 8rem;
+            cursor: pointer;
+        }
+
+        // 1. 기본값 (모바일 우선)
+        .m-only {
+            display: block;
+
+            @include desktop {
+                display: none;
+            }
+        }
+
+        .pc-only {
+            display: none;
+
+            @include desktop {
+                display: flex;
+            }
         }
     }
 }
@@ -41,15 +68,51 @@ main {
     width: 100vw;
     height: 100vh;
     background: url(../image/main_img/main_bg.png) 37%/cover no-repeat;
+
+    .inner-wide {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        padding: 0 2rem; // 2rem = 20px 시안대로
+
+
+        .typing_container {
+            padding-top: 5rem;
+
+            div {
+                line-height: 110%;
+                font-size: 3.2rem;
+                font-family: "Outfit";
+                font-weight: 600;
+                color: #FFFFFF;
+                text-align: right;
+                opacity: 0;
+                transform: translateY(100px);
+                transition: opacity 1s ease-in-out, transform 1.5s ease-in-out;
+            }
+        }
+
+        .txt {
+            padding-bottom: 4rem;
+            font-family: "Outfit";
+            font-weight: 300;
+            font-size: 1.6rem;
+            color: #FFFFFF;
+            text-align: right;
+        }
+    }
 }
 
-section { // common style
+section {
+    // common style
     display: none;
-    
+
     .inner {
         padding: 0 2rem;
-        
+
     }
+
     &#about {
         .title {
             font-size: 4rem;

@@ -3,6 +3,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -115,22 +116,41 @@ body {
   font-size: 1.6rem;
 }
 
-.header-util {
-  display: none;
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  transform: translate3d(0, -100px, 0);
+  opacity: 0;
+  transition: all 0.5s;
 }
-.header-util .m-only {
+header.on {
+  transform: none;
+  opacity: 1;
+}
+header.scrolled {
+  background-color: rgba(255, 255, 255, 0.5294117647);
+  height: 8rem;
+}
+header .inner .logo {
+  background: url(../image/main_img/logo_b.png) no-repeat center center/100% auto;
+  width: 8rem;
+  cursor: pointer;
+}
+header .inner .m-only {
   display: block;
 }
 @media (min-width: 1024px) {
-  .header-util .m-only {
+  header .inner .m-only {
     display: none;
   }
 }
-.header-util .pc-only {
+header .inner .pc-only {
   display: none;
 }
 @media (min-width: 1024px) {
-  .header-util .pc-only {
+  header .inner .pc-only {
     display: flex;
   }
 }
@@ -139,6 +159,35 @@ main {
   width: 100vw;
   height: 100vh;
   background: url(../image/main_img/main_bg.png) 37%/cover no-repeat;
+}
+main .inner-wide {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 2rem;
+}
+main .inner-wide .typing_container {
+  padding-top: 5rem;
+}
+main .inner-wide .typing_container div {
+  line-height: 110%;
+  font-size: 3.2rem;
+  font-family: "Outfit";
+  font-weight: 600;
+  color: #FFFFFF;
+  text-align: right;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-in-out, transform 1.5s ease-in-out;
+}
+main .inner-wide .txt {
+  padding-bottom: 4rem;
+  font-family: "Outfit";
+  font-weight: 300;
+  font-size: 1.6rem;
+  color: #FFFFFF;
+  text-align: right;
 }
 
 section {
