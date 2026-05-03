@@ -115,13 +115,6 @@ body {
   font-size: 1.6rem;
 }
 
-section .inner {
-  padding: 0 2rem;
-}
-section#about .title {
-  font-size: 4rem;
-}
-
 .header-util {
   display: none;
 }
@@ -143,8 +136,17 @@ section#about .title {
 }
 
 main {
-  display: none;
   width: 100vw;
   height: 100vh;
   background: url(../image/main_img/main_bg.png) 37%/cover no-repeat;
+}
+
+section {
+  display: none;
+}
+section .inner {
+  padding: 0 2rem;
+}
+section#about .title {
+  font-size: 4rem;
 }/*# sourceMappingURL=style.css.map */

@@ -16,37 +16,6 @@ body {
 }
 
 
-
-section { // common style
-    .inner {
-        padding: 0 2rem;
-        
-    }
-    &#about {
-        .title {
-            font-size: 4rem;
-        }
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .header-util {
     display: none;
 
@@ -69,9 +38,21 @@ section { // common style
 }
 
 main {
-    display: none;
     width: 100vw;
     height: 100vh;
     background: url(../image/main_img/main_bg.png) 37%/cover no-repeat;
 }
 
+section { // common style
+    display: none;
+    
+    .inner {
+        padding: 0 2rem;
+        
+    }
+    &#about {
+        .title {
+            font-size: 4rem;
+        }
+    }
+}
